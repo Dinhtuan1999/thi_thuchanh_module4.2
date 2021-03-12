@@ -1,0 +1,35 @@
+<div class="card mt-5">
+  <div class="card-body mt-2">
+    <form>
+      <div class="form-group" [formGroup]="validateForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Tên sách:</label>
+        <input type="text" class="form-control" [(ngModel)]="books.title" name="title" formControlName="title">
+      </div>
+        <div class="alert alert-danger" role="alert" *ngIf="validateForm.get('title').invalid && validateForm.get('title').touched">
+          Tên sách Không Hợp Lệ!
+        </div>
+        <div class="form-group" [formGroup]="validateForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Tác giả:</label>
+        <input type="text" class="form-control"  [(ngModel)]="books.author" name="author" formControlName="author">
+      </div>
+          <div class="alert alert-danger" role="alert" *ngIf="validateForm.get('author').invalid && validateForm.get('author').touched">
+            Tác giả Không Hợp Lệ!
+          </div>
+          <div class="form-group" [formGroup]="validateForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Mô tả sách:</label>
+        <textarea type="text" class="form-control"  [(ngModel)]="books.description" name="description" formControlName="description"></textarea>
+      </div>
+            <div class="alert alert-danger" role="alert" *ngIf="validateForm.get('description').invalid && validateForm.get('description').touched">
+              Mô tả sách Không Hợp Lệ!
+            </div>
+            <button  class="btn btn-success" (click)="addBooks()">Thêm sách</button>
+      <button (click)="gotoList()" class="btn btn-primary ml-2">Quay lại</button>
+  </div>
+</div>
+</div>
+</form>
+</div>
+</div>

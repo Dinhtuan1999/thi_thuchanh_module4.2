@@ -1,0 +1,41 @@
+
+
+<!--<router-outlet></router-outlet>-->
+<div class="page-container">
+  <div class="left-content">
+    <div class="mother-grid-inner">
+
+      <div class="header-main">
+
+        <div class="container">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+
+      <div class="copyrights">
+        <p>© 2021 Book. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="sidebar-menu">
+    <div class="logo"> <a routerLink="books" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a routerLink="books"> <span id="logo" ></span>
+      <!--<img id="logo" src="" alt="Logo"/>-->
+    </a> </div>
+    <div class="menu">
+      <ul id="menu" >
+        <li><a routerLink="books"><i class="fa fa-cogs"></i><span>Quản Lý Sách</span><span class="fa fa-angle-right" style="float: right"></span></a>
+          <ul>
+            <li><a routerLink="books"> Danh Sách Sách </a></li>
+            <li><a routerLink="add"> Thêm Mới Sách </a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="clearfix"> </div>
+</div>
